@@ -205,8 +205,6 @@ Example:
 <suite parallel="classes" thread-count="3">
 ```
 
----
-
 # 🌐 Cross Browser Execution
 
 Supported browsers:

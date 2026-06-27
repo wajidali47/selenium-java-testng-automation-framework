@@ -33,13 +33,13 @@ public class DriverFactory {
                     WebDriverManager.chromedriver().setup();
 
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--start-maximized");
+                    options.addArguments("--headless=new");
+                    options.addArguments("--window-size=1920,1080");
                     options.addArguments("--disable-notifications");
                     options.addArguments("--incognito");
-
-                    if (Boolean.parseBoolean(ConfigReader.getProperty("headless"))) {
-                        options.addArguments("--headless=new");
-                    }
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--disable-gpu");
 
                     driver.set(new ChromeDriver(options));
                     break;
