@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SauceDemo Automation Suite"
+       parallel="classes"
+       thread-count="3">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+        <listener class-name="listeners.RetryTransformer"/>
+    </listeners>
+
+    <test name="Regression Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.AddToCartTest"/>
+            <class name="tests.CheckoutTest"/>
+        </classes>
+    </test>
+
+</suite>
